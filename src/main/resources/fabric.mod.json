@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "cullclouds",
+  "version": "${version}",
+
+  "name": "Cull Clouds",
+  "description": "Improving clouds culling way to not render parts which you cant see to increase fps",
+  "authors": [
+    "ugamii"
+  ],
+  "contact": {
+    "issues": "https://github.com/ugamii/CullClouds/issues",
+    "sources": "https://github.com/ugamii/CullClouds"
+  },
+
+  "license": "LGPLv3",
+  "icon": "assets/cullclouds/icon.png",
+
+  "entrypoints": {
+    "client": [
+      "dev.ugamii.cullclouds.CullClouds"
+    ]
+  },
+  "mixins": [
+    "cullclouds.mixins.json"
+  ]
+}
