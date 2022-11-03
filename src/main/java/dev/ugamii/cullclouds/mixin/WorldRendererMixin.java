@@ -13,14 +13,14 @@ import org.spongepowered.asm.mixin.Shadow;
 public abstract class WorldRendererMixin {
 
 	@Shadow
-	private CloudRenderMode lastCloudRenderMode;
+	private CloudRenderMode lastCloudsRenderMode;
 
 	/**
 	 * @author author
 	 * @reason reason
 	 */
 	@Overwrite
-	private BufferBuilder.BuiltBuffer renderClouds(BufferBuilder builder, double x, double y, double z, Vec3d color) {
+	private void renderClouds(BufferBuilder builder, double x, double y, double z, Vec3d color) {
 
 		float k = MathHelper.floor(x) * 0.00390625F;
 		float l = MathHelper.floor(z) * 0.00390625F;
@@ -41,7 +41,7 @@ public abstract class WorldRendererMixin {
 		builder.begin(VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE_COLOR_NORMAL);
 		float ab = MathHelper.floor(y / 4.0) * 4.0F;
 
-		if (this.lastCloudRenderMode == CloudRenderMode.FANCY) {
+		if (this.lastCloudsRenderMode == CloudRenderMode.FANCY) {
 			for (int ac = -3; ac <= 4; ++ac) {
 				for (int ad = -3; ad <= 4; ++ad) {
 					float ae = ac * 8;
@@ -105,19 +105,15 @@ public abstract class WorldRendererMixin {
 					}
 				}
 			}
-		}
-
-		else {
+		} else {
 			for (int ah = -32; ah < 32; ah += 32) {
 				for (int ai = -32; ai < 32; ai += 32) {
 					builder.vertex(ah, ab, ai + 32).texture(ah * 0.00390625F + k, (ai + 32) * 0.00390625F + l).color(m, n, o, 0.8F).normal(0.0F, -1.0F, 0.0F).next();
 					builder.vertex(ah + 32, ab, ai + 32).texture((ah + 32) * 0.00390625F + k, (ai + 32) * 0.00390625F + l).color(m, n, o, 0.8F).normal(0.0F, -1.0F, 0.0F).next();
 					builder.vertex(ah + 32, ab, ai).texture((ah + 32) * 0.00390625F + k, ai * 0.00390625F + l).color(m, n, o, 0.8F).normal(0.0F, -1.0F, 0.0F).next();
-					builder.vertex(ah, ab, ai).texture( ah * 0.00390625F + k, ai * 0.00390625F + l).color(m, n, o, 0.8F).normal(0.0F, -1.0F, 0.0F).next();
+					builder.vertex(ah, ab, ai).texture(ah * 0.00390625F + k, ai * 0.00390625F + l).color(m, n, o, 0.8F).normal(0.0F, -1.0F, 0.0F).next();
 				}
 			}
 		}
-
-		return builder.end();
 	}
 }

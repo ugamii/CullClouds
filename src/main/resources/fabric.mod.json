@@ -16,6 +16,7 @@
   "license": "LGPLv3",
   "icon": "assets/cullclouds/icon.png",
 
+  "environment": "*",
   "entrypoints": {
     "client": [
       "dev.ugamii.cullclouds.CullClouds"
