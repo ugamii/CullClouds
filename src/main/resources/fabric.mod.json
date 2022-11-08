@@ -4,7 +4,7 @@
   "version": "${version}",
 
   "name": "Cull Clouds",
-  "description": "Improving clouds culling way to not render parts which you cant see to increase fps",
+  "description": "Improving clouds building way to not render parts which you cant see to increase fps",
   "authors": [
     "ugamii"
   ],
@@ -16,7 +16,6 @@
   "license": "LGPLv3",
   "icon": "assets/cullclouds/icon.png",
 
-  "environment": "*",
   "entrypoints": {
     "client": [
       "dev.ugamii.cullclouds.CullClouds"

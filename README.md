@@ -1,13 +1,16 @@
 # Cull Clouds
 
-Fabric mod that improves clouds culling way to not render parts which you cant see to increase fps
+Fabric mod that improves clouds building way to not render parts which you cant see to increase fps
+
+Works only with "Fancy" clouds
 
 <a href="https://discord.gg/k4jjzn5jwZ"><img alt="discord-singular" height="40" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@2/assets/compact/social/discord-singular_vector.svg"></a>
 <a href="https://modrinth.com/mod/cullclouds"><img alt="modrinth" height="40" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@2/assets/compact/available/modrinth_vector.svg"></a>
+<a href="https://www.curseforge.com/minecraft/mc-mods/cullclouds"><img alt="curseforge" height="40" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@2/assets/compact/available/curseforge_vector.svg"></a>
 
 ## Compatibility
 
-This mod has incompatibilities, I tested it with two mods:
+This mod has compatibility issues, I tested it with two mods:
 
 Extended Clouds - does not run with Cull Clouds
 
@@ -21,4 +24,4 @@ Here's a comparison of fps between Vanilla and Cull Clouds
 
 **If you're not playing on a flat world, the increase may be very small, something like a 1-2 fps difference**
 
-![FPS Comparison](https://i.imgur.com/PQqef9f.png)
+![FPS Comparison](https://i.imgur.com/f9DxNAt.png)

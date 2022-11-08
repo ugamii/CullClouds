@@ -9,6 +9,6 @@ public class CullClouds implements ClientModInitializer {
 
 	@Override
 	public void onInitializeClient() {
-		LOGGER.info("[Cull Clouds] eeeeeee");
+		LOGGER.info("[Cull Clouds] this mod doesnt cull clouds");
 	}
 }
