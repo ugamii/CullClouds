@@ -4,7 +4,7 @@
   "version": "${version}",
 
   "name": "Cull Clouds",
-  "description": "Improving clouds culling way to not render parts which you cant see to increase fps",
+  "description": "Improves clouds culling method to exclude parts you can't see from rendering to increase fps",
   "authors": [
     "ugamii"
   ],
